@@ -1,0 +1,26 @@
+explanation of how I built the PDF-based chatbot using the Groq key:
+
+PDF Upload & Parsing:
+
+Used PyPDF2 to read and extract text from the uploaded PDF file.
+Embedding and Indexing:
+
+Employed SentenceTransformers to convert PDF text into vector embeddings.
+Used Faiss to create an index for efficient similarity search across the document.
+Question Handling:
+
+When the user asks a question, the app:
+Converts the query into an embedding.
+Searches the Faiss index for the most relevant parts of the PDF.
+Response Generation:
+
+Sent the relevant context from the PDF and the user's query to Groq Chat (via langchain-groq) for generating an intelligent, contextual response.
+Streamlit Interface:
+
+Built an interactive frontend using Streamlit to:
+Upload PDFs.
+Display a chat interface for user queries and responses.
+Key Features:
+
+Works entirely with Groq for LLM processing.
+Provides direct, accurate responses from the uploaded PD

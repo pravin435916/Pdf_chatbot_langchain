@@ -11,7 +11,7 @@ import os
 
 # Load environment variables
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("api_key")
 
 # Streamlit page configuration
 st.set_page_config(

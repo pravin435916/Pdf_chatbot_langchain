@@ -11,7 +11,7 @@ import os
 
 # Load environment variables
 load_dotenv()
-GROQ_API_KEY = os.getenv("api_key")
+api_key = os.getenv("api_key")
 
 # Streamlit page configuration
 st.set_page_config(
@@ -42,7 +42,7 @@ def build_qa_chain(text):
 
     # Initialize Groq chat model
     groq_chat = ChatGroq(
-        groq_api_key=GROQ_API_KEY,
+        groq_api_key=api_key,
         model_name="mixtral-8x7b-32768"
     )
 
